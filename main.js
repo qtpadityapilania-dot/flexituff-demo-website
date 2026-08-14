@@ -162,10 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
             goToSlide(currentSlide + 1);
             resetAutoSlide();
         });
-
-        // Pause auto-play when user hovers over hero section, resume on mouse leave
-        heroSectionEl.addEventListener('mouseenter', stopAutoSlide);
-        heroSectionEl.addEventListener('mouseleave', startAutoSlide);
     }
 
     // Start auto slide timer on load
