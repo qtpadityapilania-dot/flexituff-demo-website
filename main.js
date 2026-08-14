@@ -70,6 +70,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSlide = 0;
     const totalSlides = bgSlides.length;
     let isTransitioning = false;
+    let autoSlideTimer = null;
+    const AUTO_SLIDE_INTERVAL = 3000; // 3 seconds per slide
+
+    function startAutoSlide() {
+        stopAutoSlide();
+        if (totalSlides > 1) {
+            autoSlideTimer = setInterval(() => {
+                goToSlide(currentSlide + 1);
+            }, AUTO_SLIDE_INTERVAL);
+        }
+    }
+
+    function stopAutoSlide() {
+        if (autoSlideTimer) {
+            clearInterval(autoSlideTimer);
+            autoSlideTimer = null;
+        }
+    }
+
+    function resetAutoSlide() {
+        stopAutoSlide();
+        startAutoSlide();
+    }
 
     function goToSlide(index) {
         if (isTransitioning || totalSlides === 0) return;
@@ -106,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             e.stopPropagation();
             goToSlide(currentSlide - 1);
+            resetAutoSlide();
         });
     }
     if (nextBtn) {
@@ -113,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             e.stopPropagation();
             goToSlide(currentSlide + 1);
+            resetAutoSlide();
         });
     }
 
@@ -121,12 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             e.stopPropagation();
             goToSlide(parseInt(dot.getAttribute('data-slide-target'), 10));
+            resetAutoSlide();
         });
     });
 
     if (totalSlideNum) totalSlideNum.innerText = String(totalSlides).padStart(2, '0');
 
-    // Tap / Click anywhere on Hero section to switch to next slide (No auto-timer)
+    // Tap / Click anywhere on Hero section to switch to next slide
     const heroSectionEl = document.getElementById('hero');
     if (heroSectionEl) {
         heroSectionEl.addEventListener('click', (e) => {
@@ -134,8 +160,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 return; // ignore clicks on control buttons
             }
             goToSlide(currentSlide + 1);
+            resetAutoSlide();
         });
+
+        // Pause auto-play when user hovers over hero section, resume on mouse leave
+        heroSectionEl.addEventListener('mouseenter', stopAutoSlide);
+        heroSectionEl.addEventListener('mouseleave', startAutoSlide);
     }
+
+    // Start auto slide timer on load
+    startAutoSlide();
 
     // =========================================================
     // 4. Metrics Strip — Native CSS Auto-Scroll Marquee Ticker
