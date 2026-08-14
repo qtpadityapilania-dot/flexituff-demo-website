@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalSlides = bgSlides.length;
     let isTransitioning = false;
     let autoSlideTimer = null;
-    const AUTO_SLIDE_INTERVAL = 3000; // 3 seconds per slide
+    const AUTO_SLIDE_INTERVAL = 5000; // 5 seconds per slide
 
     function startAutoSlide() {
         stopAutoSlide();
