@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Type B Anti-Static Bags | Flexituff Technology International</title>
+    <meta name="description" content="Anti-static FIBC bags engineered with thin insulating coating to maintain breakdown voltage below 6kV, preventing propagating brush discharges.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modern Header Spacing Fix so Navbar never overlaps Breadcrumb */
+        .product-detail-hero {
+            padding-top: 8.5rem;
+            padding-bottom: 4rem;
+            background: linear-gradient(145deg, #051329 0%, #0d2b5e 60%, #163e80 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-detail-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(22, 62, 128, 0.4) 0%, rgba(5, 19, 41, 0) 70%);
+            pointer-events: none;
+        }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.85);
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .breadcrumb-sep {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.8rem;
+        }
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Modern Floating Image Container with Glassmorphism & NO White Background */
+        .product-detail-img-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: heroFloat 6s ease-in-out infinite alternate;
+            overflow: hidden;
+        }
+        .product-detail-img-box:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+        .product-detail-img-box img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
+        }
+        .product-detail-img-box:hover img {
+            transform: scale(1.05);
+        }
+        
+        @keyframes heroFloat {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* Hero Pill Badges */
+        .hero-pill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.5rem 0 2rem 0;
+        }
+        .hero-pill {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Specs & Cards Styling */
+        .spec-table-box {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.25rem;
+            box-shadow: 0 10px 30px rgba(13, 43, 94, 0.08);
+            border: 1px solid var(--navy-border);
+            margin-top: 1.5rem;
+        }
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .spec-table th, .spec-table td {
+            padding: 1.1rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(13, 43, 94, 0.08);
+        }
+        .spec-table tr:last-child th, .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+        .spec-table th {
+            width: 38%;
+            font-family: var(--font-heading);
+            color: var(--navy-primary);
+            font-size: 0.95rem;
+        }
+        .spec-table td {
+            color: var(--navy-muted);
+            font-weight: 500;
+        }
+
+        .feature-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.75rem;
+            margin-top: 1.75rem;
+        }
+        .feature-card-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--navy-border);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s ease;
+        }
+        .feature-card-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--navy-light);
+        }
+        .feature-card-item h4 {
+            margin-bottom: 0.6rem;
+            font-size: 1.15rem;
+        }
+
+        .app-pill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .app-pill {
+            background: var(--white);
+            color: var(--navy-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--navy-border);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        .app-pill:hover {
+            background: var(--navy-primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Related Products Section */
+        .related-products-section {
+            background: #f0f4f8;
+            padding: 5rem 0;
+            margin-top: 5rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .related-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--navy-border);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .related-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+        .related-card-img {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            border-radius: 14px;
+            margin-bottom: 1.25rem;
+            padding: 0.5rem;
+            overflow: hidden;
+        }
+        .related-card-img img {
+            max-height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.4s ease;
+        }
+        .related-card:hover .related-card-img img {
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 992px) {
+            .product-detail-hero {
+                padding-top: 7.5rem;
+            }
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <!-- Header Navigation -->
+    <header class="site-header subpage-header">
+        <div class="header-inner-flex">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/Flexituff_logo.png" alt="Flexituff Logo" class="site-logo-img">
+                <div class="logo-text">
+                    <span class="brand-name"><span class="brand-light">Flexi</span><span class="brand-heavy">tuff</span></span>
+                    <span class="brand-tagline">Technology International Limited</span>
+                </div>
+            </a>
+            <div class="header-right-group">
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About &amp; History</a>
+                    <a href="leadership.html" class="nav-link">Leadership &amp; Vision</a>
+                    <div class="nav-item-dropdown">
+                        <a href="products.html" class="nav-link active">Products <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-col">
+                                    <div class="mega-menu-col-title">FIBCs / Jumbo Bags</div>
+                                    <ul class="mega-menu-list">
+                                        <li><a href="product-types-abc.html" class="mega-menu-link active"><span class="mega-menu-link-title">Types A, B &amp; C</span><span class="mega-menu-link-desc">Electrostatic safety classification guide</span></a></li>
+                                        <li><a href="product-un-certified.html" class="mega-menu-link"><span class="mega-menu-link-title">UN Certified FIBC</span><span class="mega-menu-link-desc">Hazardous goods IMDG code compliant</span></a></li>
+                                        <li><a href="product-food-grade.html" class="mega-menu-link"><span class="mega-menu-link-title">Food Grade Bags</span><span class="mega-menu-link-desc">BRCGS A+ ISO Class 7 cleanroom</span></a></li>
+                                        <li><a href="product-rpp-eco.html" class="mega-menu-link"><span class="mega-menu-link-title">rPP Eco FIBC</span><span class="mega-menu-link-desc">30%+ recycled PP sustainable bags</span></a></li>
+                                        <li><a href="product-cleanroom-liners.html" class="mega-menu-link"><span class="mega-menu-link-title">Cleanroom Liners</span><span class="mega-menu-link-desc">Class 7 cleanroom PE liners &amp; barrier bags</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-col">
+                                    <div class="mega-menu-col-title">Custom Designs We Manufacture</div>
+                                    <ul class="mega-menu-list">
+                                        <li><a href="product-u-panel.html" class="mega-menu-link"><span class="mega-menu-link-title">U Panel</span><span class="mega-menu-link-desc">Single-U body high strength construction</span></a></li>
+                                        <li><a href="product-four-panel.html" class="mega-menu-link"><span class="mega-menu-link-title">Four Panel</span><span class="mega-menu-link-desc">Industry standard 4-wall stability</span></a></li>
+                                        <li><a href="product-circular-juki.html" class="mega-menu-link"><span class="mega-menu-link-title">Circular / Juki</span><span class="mega-menu-link-desc">Seamless body for fine powder containment</span></a></li>
+                                        <li><a href="product-conical.html" class="mega-menu-link"><span class="mega-menu-link-title">Conical Bottom</span><span class="mega-menu-link-desc">Tapered bottom for total discharge</span></a></li>
+                                        <li><a href="product-tunnel-lift.html" class="mega-menu-link"><span class="mega-menu-link-title">Tunnel / Builder Bag</span><span class="mega-menu-link-desc">Patented FlexiTunnel&#174; forklift loops</span></a></li>
+                                        <li><a href="product-baffle-qbags.html" class="mega-menu-link"><span class="mega-menu-link-title">Q Bag / Baffle</span><span class="mega-menu-link-desc">Form-stable square stacking (+30% payload)</span></a></li>
+                                        <li><a href="product-ventilated.html" class="mega-menu-link"><span class="mega-menu-link-title">Ventilated</span><span class="mega-menu-link-desc">Airflow fabric for crops &amp; logs</span></a></li>
+                                        <li><a href="product-single-two-loop.html" class="mega-menu-link"><span class="mega-menu-link-title">One / Two Loop</span><span class="mega-menu-link-desc">Integral loop fertilizer &amp; agro bags</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="certifications.html" class="nav-link">Certifications</a>
+                    <a href="global.html" class="nav-link">Global Reach</a>
+                </nav>
+                <button class="btn btn-outline" id="btn-open-rfq">Request a Quote</button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-nav-drawer" id="mobileNavDrawer">
+            <div class="mobile-nav-header">
+                <img src="assets/Flexituff_logo.png" alt="Flexituff" class="mobile-drawer-logo">
+                <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu">&times;</button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About &amp; History</a>
+                <a href="leadership.html" class="mobile-nav-link">Leadership &amp; Vision</a>
+
+                <!-- Products accordion -->
+                <div class="mobile-nav-accordion" id="mobileProductsAccordion">
+                    <button class="mobile-nav-accordion-trigger" id="mobileProductsTrigger" aria-expanded="false">
+                        Products
+                        <svg class="mobile-acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="mobile-nav-accordion-body" id="mobileProductsBody">
+                        <div class="mobile-acc-section-label">FIBCs / Jumbo Bags</div>
+                        <a href="product-types-abc.html" class="mobile-acc-link active">Types A, B &amp; C</a>
+                        <a href="product-un-certified.html" class="mobile-acc-link">UN Certified FIBC</a>
+                        <a href="product-food-grade.html" class="mobile-acc-link">Food Grade Bags</a>
+                        <a href="product-rpp-eco.html" class="mobile-acc-link">rPP Eco FIBC</a>
+                        <a href="product-cleanroom-liners.html" class="mobile-acc-link">Cleanroom Liners</a>
+                        <div class="mobile-acc-divider"></div>
+                        <div class="mobile-acc-section-label">Custom Designs</div>
+                        <a href="product-u-panel.html" class="mobile-acc-link">U Panel</a>
+                        <a href="product-four-panel.html" class="mobile-acc-link">Four Panel</a>
+                        <a href="product-circular-juki.html" class="mobile-acc-link">Circular / Juki</a>
+                        <a href="product-conical.html" class="mobile-acc-link">Conical Bottom</a>
+                        <a href="product-tunnel-lift.html" class="mobile-acc-link">Tunnel / Builder Bag</a>
+                        <a href="product-baffle-qbags.html" class="mobile-acc-link">Q Bag / Baffle</a>
+                        <a href="product-ventilated.html" class="mobile-acc-link">Ventilated</a>
+                        <a href="product-single-two-loop.html" class="mobile-acc-link">One / Two Loop</a>
+                    </div>
+                </div>
+
+                <a href="certifications.html" class="mobile-nav-link">Certifications</a>
+                <a href="global.html" class="mobile-nav-link">Global Reach</a>
+            </nav>
+            <div class="mobile-nav-footer">
+                <div class="mobile-nav-contact-strip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+                    <a href="tel:+917292401681">+91 7292 401681</a>
+                </div>
+                <button class="btn btn-primary btn-full" id="btn-mobile-rfq">Request a Quote</button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    </header>
+
+    <section class="product-detail-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span class="breadcrumb-sep">&gt;</span> <a href="products.html">Products</a> <span class="breadcrumb-sep">&gt;</span> <span style="color: #ffffff; font-weight: 600;">Type B Anti-Static Bags</span>
+            </div>
+            <div class="product-detail-grid">
+                <div>
+                    <div class="badge badge-light" style="background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3); backdrop-filter: blur(10px);"><6kV Static Breakdown Voltage Protection</div>
+                    <h1 style="color: #fff; font-size: 2.8rem; margin-bottom: 1rem; line-height: 1.15;">Type B Anti-Static Bags</h1>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem; line-height: 1.6; margin-bottom: 1.25rem;">Anti-static FIBC bags engineered with thin insulating coating to maintain breakdown voltage below 6kV, preventing propagating brush discharges.</p>
+                    
+                    <div class="hero-pill-group">
+                        <span class="hero-pill">< 6kV Breakdown Voltage</span><span class="hero-pill">IEC 61340-4-4 Certified</span><span class="hero-pill">Spark Guard Coating</span><span class="hero-pill">Safe Powder Loading</span>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button class="btn btn-primary card-rfq-btn" data-product="Type B Anti-Static Bags">Request Quotation</button>
+                        <a href="products.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.5); color: #fff;">Back to Products Catalog</a>
+                    </div>
+                </div>
+                <div class="product-detail-img-box">
+                    <img src="assets/antistatic_bag.png" alt="Type B Anti-Static Bags">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Product Overview</h2>
+            <p style="font-size: 1.15rem; line-height: 1.85; color: var(--navy-primary); max-width: 900px;">Type B bulk bags are made from plain woven fabric with a thin breakdown coating designed to prevent dangerous propagating brush discharges (PBD). Tested to guarantee static breakdown voltage remains strictly below 6kV.</p>
+
+            <div style="margin-top: 4rem;">
+                <h2 style="font-size: 2rem;">Technical Specifications</h2>
+                <div class="spec-table-box">
+                    <table class="spec-table">
+                        <tbody>
+                            <tr><th>Breakdown Voltage</th><td>Strictly < 6kV (IEC 61340-4-4)</td></tr><tr><th>Safety Target</th><td>Prevents Propagating Brush Discharges (PBD)</td></tr><tr><th>Fabric Type</th><td>Polypropylene woven with insulating coating</td></tr><tr><th>Usage Environment</th><td>Dry combustible powders in non-explosive dust atmosphere</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h2 style="font-size: 2rem;">Key Design Features &amp; Advantages</h2>
+                <div class="feature-card-grid">
+                    <div class="feature-card-item"><h4>Spark Discharge Prevention</h4><p>Coating prevents high-energy electrostatic spark buildup.</p></div><div class="feature-card-item"><h4>Certified Safety Testing</h4><p>100% batch tested under IEC static testing protocols.</p></div><div class="feature-card-item"><h4>Reliable Bulk Handling</h4><p>Protects plant operators during high-velocity dry powder filling.</p></div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h2 style="font-size: 2rem;">Recommended Industry Applications</h2>
+                <div class="app-pill-group">
+                    <span class="app-pill">Sugar & Starch Powders</span><span class="app-pill">Plastic Resins</span><span class="app-pill">Non-Flammable Chemical Powders</span><span class="app-pill">Dry Food Ingredients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-products-section">
+        <div class="container">
+            <h2 style="font-size: 2rem; text-align: center;">Explore Other FIBC Solutions</h2>
+            <p style="text-align: center; color: var(--navy-muted); margin-top: 0.5rem;">Compare with other structural and electrostatic bulk packaging options.</p>
+            <div class="related-grid">
+                
+        <div class="related-card">
+            <div class="related-card-img">
+                <img src="assets/antistatic_bag.png" alt="Type C & Type D Anti-Static">
+            </div>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Type C & Type D Anti-Static</h4>
+            <a href="product-type-a-b-c-d.html#type-c" class="btn btn-outline btn-full" style="margin-top: auto;">Explore Bag &rarr;</a>
+        </div>
+        
+        <div class="related-card">
+            <div class="related-card-img">
+                <img src="assets/bulk_bags.png" alt="Type A Bulk Bags">
+            </div>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Type A Bulk Bags</h4>
+            <a href="product-type-a-b-c-d.html#type-a" class="btn btn-outline btn-full" style="margin-top: auto;">Explore Bag &rarr;</a>
+        </div>
+        
+        <div class="related-card">
+            <div class="related-card-img">
+                <img src="assets/food_grade_cleanroom.png" alt="Food Grade & Pharma FIBC">
+            </div>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Food Grade & Pharma FIBC</h4>
+            <a href="product-food-grade.html" class="btn btn-outline btn-full" style="margin-top: auto;">Explore Bag &rarr;</a>
+        </div>
+        
+            </div>
+        </div>
+    </section>
+    
+    <footer class="site-footer">
+        <div class="container footer-cta-block">
+            <h2>Need Custom Technical Specifications?</h2>
+            <p>Our sales engineering team can customize dimensions, liners, spouts, and safety factors tailored to your exact payload.</p>
+            <button class="btn btn-primary btn-lg" id="btn-footer-rfq">Request Custom Quotation</button>
+        </div>
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <div class="brand-logo footer-logo"><img src="assets/Flexituff_logo.png" alt="Flexituff Logo" class="site-logo-img footer-logo-img"></div>
+                <p class="footer-text">Flexituff Technology International Limited<br>C 41-50, SEZ, Sector 3 Pithampur 454775<br>Distt. Dhar, Madhya Pradesh, India</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About &amp; History</a></li>
+                    <li><a href="leadership.html">Leadership &amp; Vision</a></li>
+                    <li><a href="products.html">Products Catalog</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="global.html">Global Reach</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Sales</h4>
+                <p>FIBC: <a href="mailto:fibc@flexituff.com">fibc@flexituff.com</a></p>
+                <p>Phone: <a href="tel:+917292401681">+91 7292 401681 / 82 / 83</a></p>
+                <p>Website: <a href="https://flexituff.com/fibc/">flexituff.com/fibc</a></p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>2026 Flexituff Technology International Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="rfq-modal-overlay" id="rfqModal">
+        <div class="rfq-modal">
+            <button class="modal-close" id="modalClose">X</button>
+            <div class="modal-header">
+                <h3>Request FIBC Quotation</h3>
+                <p>Specify your FIBC requirements and our engineering team will respond within 24 hours.</p>
+            </div>
+            <form id="rfqForm" onsubmit="event.preventDefault(); handleRFQSubmit();">
+                <div class="form-group">
+                    <label for="bagType">FIBC Product Type</label>
+                    <select id="bagType" class="form-control" required>
+                        <option value="Type B Anti-Static Bags">Type B Anti-Static Bags</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName">Your Full Name</label>
+                        <input type="text" id="contactName" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Work Email</label>
+                        <input type="email" id="contactEmail" class="form-control" placeholder="john@company.com" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Quotation Request</button>
+            </form>
+            <div id="rfqSuccessMsg" class="success-message" style="display: none;">Thank you! Your request has been logged. Our FIBC sales team will reach out to you shortly.</div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

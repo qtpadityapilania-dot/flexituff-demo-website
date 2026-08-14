@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Type A, B &amp; C FIBC Bulk Bags | Electrostatic Safety Guide | Flexituff International</title>
+    <meta name="description" content="Complete guide to Type A, B, C &amp; D electrostatic FIBC bulk bags. Understand breakdown voltage protection, grounding requirements, and the patented Crohmiq® Type D dissipative technology. IEC 61340-4-4 certified.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-detail-hero {
+            padding-top: 8.5rem;
+            padding-bottom: 5rem;
+            background: linear-gradient(145deg, #051329 0%, #0d2b5e 60%, #163e80 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-detail-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(22, 62, 128, 0.4) 0%, rgba(5, 19, 41, 0) 70%);
+            pointer-events: none;
+        }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .breadcrumb a { color: rgba(255,255,255,0.85); transition: color 0.3s; }
+        .breadcrumb a:hover { color: #fff; text-decoration: underline; }
+        .breadcrumb-sep { color: rgba(255,255,255,0.4); }
+        .hero-pill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.5rem 0 2.5rem 0;
+        }
+        .hero-pill {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.45rem 1.1rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .product-detail-img-box {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.15);
+            animation: heroFloat 6s ease-in-out infinite alternate;
+            overflow: hidden;
+        }
+        .product-detail-img-box img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 18px;
+        }
+        @keyframes heroFloat {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* Type tabs nav */
+        .type-tab-nav {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3.5rem auto 3rem auto;
+        }
+        .type-tab-btn {
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            border: 2px solid var(--navy-border);
+            background: #fff;
+            color: var(--navy-primary);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+            font-family: var(--font-body);
+        }
+        .type-tab-btn:hover, .type-tab-btn.active {
+            background: var(--navy-primary);
+            color: #fff;
+            border-color: var(--navy-primary);
+            box-shadow: 0 8px 20px rgba(13,43,94,0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Type section panels */
+        .type-panel {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .type-panel.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Type content layout */
+        .type-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: start;
+            margin-bottom: 3rem;
+        }
+        .type-image-col img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(13,43,94,0.12);
+            padding: 1rem;
+            background: var(--navy-subtle);
+        }
+        .type-safety-alert {
+            padding: 1.25rem 1.5rem;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .alert-safe { background: #f0fdf4; border: 1.5px solid #86efac; color: #166534; }
+        .alert-caution { background: #fffbeb; border: 1.5px solid #fbbf24; color: #92400e; }
+        .alert-danger { background: #fef2f2; border: 1.5px solid #fca5a5; color: #991b1b; }
+
+        /* Spec grid */
+        .spec-grid-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 1rem;
+            background: #f8fafc;
+            border-radius: 18px;
+            padding: 1.75rem;
+            border: 1px solid var(--navy-border);
+            margin-top: 1.5rem;
+        }
+        .spec-item-box strong {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--navy-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 0.25rem;
+        }
+        .spec-item-box span {
+            font-weight: 700;
+            color: var(--navy-primary);
+            font-size: 0.98rem;
+        }
+
+        /* Comparison matrix */
+        .matrix-wrap {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(13,43,94,0.07);
+            border: 1px solid var(--navy-border);
+            overflow-x: auto;
+            margin: 4rem 0;
+        }
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+        .matrix-table th, .matrix-table td {
+            padding: 1rem 1.25rem;
+            text-align: center;
+            border-bottom: 1px solid var(--navy-border);
+            font-size: 0.95rem;
+        }
+        .matrix-table th {
+            background: var(--navy-subtle);
+            color: var(--navy-primary);
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+        .matrix-table td:first-child, .matrix-table th:first-child {
+            text-align: left;
+            font-weight: 700;
+        }
+        .matrix-table tr:last-child td { border-bottom: none; }
+        .check-yes { color: #16a34a; font-weight: 700; }
+        .check-no { color: #dc2626; font-weight: 700; }
+
+        @media (max-width: 900px) {
+            .product-detail-grid, .type-content-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+        <!-- Header Navigation -->
+    <header class="site-header subpage-header">
+        <div class="header-inner-flex">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/Flexituff_logo.png" alt="Flexituff Logo" class="site-logo-img">
+                <div class="logo-text">
+                    <span class="brand-name"><span class="brand-light">Flexi</span><span class="brand-heavy">tuff</span></span>
+                    <span class="brand-tagline">Technology International Limited</span>
+                </div>
+            </a>
+            <div class="header-right-group">
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About &amp; History</a>
+                    <a href="leadership.html" class="nav-link">Leadership &amp; Vision</a>
+                    <div class="nav-item-dropdown">
+                        <a href="products.html" class="nav-link active">Products <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-col">
+                                    <div class="mega-menu-col-title">FIBCs / Jumbo Bags</div>
+                                    <ul class="mega-menu-list">
+                                        <li><a href="product-types-abc.html" class="mega-menu-link active"><span class="mega-menu-link-title">Types A, B &amp; C</span><span class="mega-menu-link-desc">Electrostatic safety classification guide</span></a></li>
+                                        <li><a href="product-un-certified.html" class="mega-menu-link"><span class="mega-menu-link-title">UN Certified FIBC</span><span class="mega-menu-link-desc">Hazardous goods IMDG code compliant</span></a></li>
+                                        <li><a href="product-food-grade.html" class="mega-menu-link"><span class="mega-menu-link-title">Food Grade Bags</span><span class="mega-menu-link-desc">BRCGS A+ ISO Class 7 cleanroom</span></a></li>
+                                        <li><a href="product-rpp-eco.html" class="mega-menu-link"><span class="mega-menu-link-title">rPP Eco FIBC</span><span class="mega-menu-link-desc">30%+ recycled PP sustainable bags</span></a></li>
+                                        <li><a href="product-cleanroom-liners.html" class="mega-menu-link"><span class="mega-menu-link-title">Cleanroom Liners</span><span class="mega-menu-link-desc">Class 7 cleanroom PE liners &amp; barrier bags</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-col">
+                                    <div class="mega-menu-col-title">Custom Designs We Manufacture</div>
+                                    <ul class="mega-menu-list">
+                                        <li><a href="product-u-panel.html" class="mega-menu-link"><span class="mega-menu-link-title">U Panel</span><span class="mega-menu-link-desc">Single-U body high strength construction</span></a></li>
+                                        <li><a href="product-four-panel.html" class="mega-menu-link"><span class="mega-menu-link-title">Four Panel</span><span class="mega-menu-link-desc">Industry standard 4-wall stability</span></a></li>
+                                        <li><a href="product-circular-juki.html" class="mega-menu-link"><span class="mega-menu-link-title">Circular / Juki</span><span class="mega-menu-link-desc">Seamless body for fine powder containment</span></a></li>
+                                        <li><a href="product-conical.html" class="mega-menu-link"><span class="mega-menu-link-title">Conical Bottom</span><span class="mega-menu-link-desc">Tapered bottom for total discharge</span></a></li>
+                                        <li><a href="product-tunnel-lift.html" class="mega-menu-link"><span class="mega-menu-link-title">Tunnel / Builder Bag</span><span class="mega-menu-link-desc">Patented FlexiTunnel&#174; forklift loops</span></a></li>
+                                        <li><a href="product-baffle-qbags.html" class="mega-menu-link"><span class="mega-menu-link-title">Q Bag / Baffle</span><span class="mega-menu-link-desc">Form-stable square stacking (+30% payload)</span></a></li>
+                                        <li><a href="product-ventilated.html" class="mega-menu-link"><span class="mega-menu-link-title">Ventilated</span><span class="mega-menu-link-desc">Airflow fabric for crops &amp; logs</span></a></li>
+                                        <li><a href="product-single-two-loop.html" class="mega-menu-link"><span class="mega-menu-link-title">One / Two Loop</span><span class="mega-menu-link-desc">Integral loop fertilizer &amp; agro bags</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="certifications.html" class="nav-link">Certifications</a>
+                    <a href="global.html" class="nav-link">Global Reach</a>
+                </nav>
+                <button class="btn btn-outline" id="btn-open-rfq">Request a Quote</button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-nav-drawer" id="mobileNavDrawer">
+            <div class="mobile-nav-header">
+                <img src="assets/Flexituff_logo.png" alt="Flexituff" class="mobile-drawer-logo">
+                <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu">&times;</button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About &amp; History</a>
+                <a href="leadership.html" class="mobile-nav-link">Leadership &amp; Vision</a>
+
+                <!-- Products accordion -->
+                <div class="mobile-nav-accordion" id="mobileProductsAccordion">
+                    <button class="mobile-nav-accordion-trigger" id="mobileProductsTrigger" aria-expanded="false">
+                        Products
+                        <svg class="mobile-acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="mobile-nav-accordion-body" id="mobileProductsBody">
+                        <div class="mobile-acc-section-label">FIBCs / Jumbo Bags</div>
+                        <a href="product-types-abc.html" class="mobile-acc-link active">Types A, B &amp; C</a>
+                        <a href="product-un-certified.html" class="mobile-acc-link">UN Certified FIBC</a>
+                        <a href="product-food-grade.html" class="mobile-acc-link">Food Grade Bags</a>
+                        <a href="product-rpp-eco.html" class="mobile-acc-link">rPP Eco FIBC</a>
+                        <a href="product-cleanroom-liners.html" class="mobile-acc-link">Cleanroom Liners</a>
+                        <div class="mobile-acc-divider"></div>
+                        <div class="mobile-acc-section-label">Custom Designs</div>
+                        <a href="product-u-panel.html" class="mobile-acc-link">U Panel</a>
+                        <a href="product-four-panel.html" class="mobile-acc-link">Four Panel</a>
+                        <a href="product-circular-juki.html" class="mobile-acc-link">Circular / Juki</a>
+                        <a href="product-conical.html" class="mobile-acc-link">Conical Bottom</a>
+                        <a href="product-tunnel-lift.html" class="mobile-acc-link">Tunnel / Builder Bag</a>
+                        <a href="product-baffle-qbags.html" class="mobile-acc-link">Q Bag / Baffle</a>
+                        <a href="product-ventilated.html" class="mobile-acc-link">Ventilated</a>
+                        <a href="product-single-two-loop.html" class="mobile-acc-link">One / Two Loop</a>
+                    </div>
+                </div>
+
+                <a href="certifications.html" class="mobile-nav-link">Certifications</a>
+                <a href="global.html" class="mobile-nav-link">Global Reach</a>
+            </nav>
+            <div class="mobile-nav-footer">
+                <div class="mobile-nav-contact-strip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+                    <a href="tel:+917292401681">+91 7292 401681</a>
+                </div>
+                <button class="btn btn-primary btn-full" id="btn-mobile-rfq">Request a Quote</button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    </header>
+
+    <section class="product-detail-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">&rsaquo;</span>
+                <a href="products.html">Products</a>
+                <span class="breadcrumb-sep">&rsaquo;</span>
+                <span style="color:#fff; font-weight:600;">Types A, B &amp; C Anti-Static FIBCs</span>
+            </div>
+            <div class="product-detail-grid">
+                <div>
+                    <div class="badge badge-light" style="background:rgba(255,255,255,0.15);color:#fff;border-color:rgba(255,255,255,0.3);">ELECTROSTATIC SAFETY GUIDE</div>
+                    <h1 style="color:#fff;font-size:2.8rem;margin:1rem 0;line-height:1.15;">Types A, B &amp; C<br>FIBC Bulk Bags</h1>
+                    <p style="color:rgba(255,255,255,0.9);font-size:1.12rem;line-height:1.7;max-width:520px;">The complete classification framework for controlling static electricity in bulk packaging for hazardous dust, solvent vapor, and gas environments — certified to IEC 61340-4-4.</p>
+                    <div class="hero-pill-group">
+                        <span class="hero-pill">IEC 61340-4-4 Certified</span>
+                        <span class="hero-pill">Official Crohmiq® Licensee</span>
+                        <span class="hero-pill">Zone 0, 1, 2, 21, 22 Safe</span>
+                        <span class="hero-pill">NFPA 652 Compliant</span>
+                    </div>
+                    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                        <button class="btn btn-primary card-rfq-btn" data-product="Types A B C Anti-Static">Request Anti-Static Quote</button>
+                        <a href="products.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);color:#fff;">All Products</a>
+                    </div>
+                </div>
+                <div class="product-detail-img-box">
+                    <img src="assets/antistatic_bag.png" alt="Type A B C Anti-Static FIBC Bulk Bags">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--bg-light);">
+        <div class="container">
+            <!-- Type tabs -->
+            <h2 style="text-align:center;font-size:2rem;">Select FIBC Type</h2>
+            <p style="text-align:center;color:var(--navy-muted);margin:0.5rem 0 0 0;">Click a type below to explore its specifications, applications, and safety ratings.</p>
+            <div class="type-tab-nav">
+                <button class="type-tab-btn active" data-target="panel-a">Type A</button>
+                <button class="type-tab-btn" data-target="panel-b">Type B</button>
+                <button class="type-tab-btn" data-target="panel-c">Type C</button>
+                <button class="type-tab-btn" data-target="panel-d">Type D — Crohmiq&reg;</button>
+            </div>
+
+            <!-- Panel A -->
+            <div class="type-panel active" id="panel-a">
+                <div class="type-content-grid">
+                    <div class="type-image-col">
+                        <img src="assets/bulk_bags.png" alt="Type A Standard FIBC Bulk Bag">
+                    </div>
+                    <div>
+                        <div class="badge" style="margin-bottom:1rem;">Standard Bulk Bags</div>
+                        <h2 style="font-size:2.2rem;margin-bottom:1rem;">Type A — Standard Polypropylene FIBC</h2>
+                        <p style="font-size:1.05rem;line-height:1.75;color:var(--navy-muted);">Type A FIBCs are made from plain woven polypropylene without any electrostatic protection. They are the most common FIBC type and are designed exclusively for non-flammable dry goods where no static hazard exists in the surrounding atmosphere.</p>
+                        <div class="type-safety-alert alert-danger">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;margin-top:1px"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            <span><strong>Warning:</strong> Do NOT use Type A bags in the presence of flammable gases, solvents, or combustible dust. There is no static protection whatsoever.</span>
+                        </div>
+                        <div class="spec-grid-box">
+                            <div class="spec-item-box"><strong>Static Protection</strong><span>None</span></div>
+                            <div class="spec-item-box"><strong>Grounding Required</strong><span>Not applicable</span></div>
+                            <div class="spec-item-box"><strong>Breakdown Voltage</strong><span>No restriction</span></div>
+                            <div class="spec-item-box"><strong>SWL Range</strong><span>500 kg – 2,000 kg</span></div>
+                            <div class="spec-item-box"><strong>Best Applications</strong><span>Sand, gravel, stone, grain, non-flammable minerals</span></div>
+                            <div class="spec-item-box"><strong>Standard</strong><span>IEC 61340-4-4</span></div>
+                        </div>
+                        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+                            <button class="btn btn-primary card-rfq-btn" data-product="Type A FIBC">Request Type A Quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel B -->
+            <div class="type-panel" id="panel-b">
+                <div class="type-content-grid">
+                    <div class="type-image-col">
+                        <img src="assets/antistatic_bag.png" alt="Type B Anti-Static FIBC">
+                    </div>
+                    <div>
+                        <div class="badge" style="margin-bottom:1rem;">&lt;6kV Breakdown Voltage</div>
+                        <h2 style="font-size:2.2rem;margin-bottom:1rem;">Type B — Anti-Static Breakdown Protection</h2>
+                        <p style="font-size:1.05rem;line-height:1.75;color:var(--navy-muted);">Type B FIBCs are constructed from polypropylene fabric with a thin insulating coating or specific weave that prevents high-energy propagating brush discharges (PBD). Rigorously tested under IEC 61340-4-4 to guarantee breakdown voltage stays strictly below 6kV.</p>
+                        <div class="type-safety-alert alert-caution">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            <span><strong>Caution:</strong> Type B bags protect against propagating brush discharges but do NOT dissipate static charge. They must NOT be used in flammable gas or vapor atmospheres.</span>
+                        </div>
+                        <div class="spec-grid-box">
+                            <div class="spec-item-box"><strong>Breakdown Voltage</strong><span>Strictly &lt; 6kV</span></div>
+                            <div class="spec-item-box"><strong>Grounding Required</strong><span>Not required</span></div>
+                            <div class="spec-item-box"><strong>Protects Against</strong><span>Propagating Brush Discharge (PBD)</span></div>
+                            <div class="spec-item-box"><strong>SWL Range</strong><span>500 kg – 2,000 kg</span></div>
+                            <div class="spec-item-box"><strong>Best Applications</strong><span>Dry combustible powders with MIE &gt; 3 mJ (starch, sugar, resin)</span></div>
+                            <div class="spec-item-box"><strong>Standard</strong><span>IEC 61340-4-4</span></div>
+                        </div>
+                        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+                            <button class="btn btn-primary card-rfq-btn" data-product="Type B Anti-Static FIBC">Request Type B Quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel C -->
+            <div class="type-panel" id="panel-c">
+                <div class="type-content-grid">
+                    <div class="type-image-col">
+                        <img src="assets/antistatic_bag.png" alt="Type C Groundable Conductive FIBC">
+                    </div>
+                    <div>
+                        <div class="badge" style="margin-bottom:1rem;">Resistance &lt; 10&sup8; Ohms</div>
+                        <h2 style="font-size:2.2rem;margin-bottom:1rem;">Type C — Groundable Conductive FIBC</h2>
+                        <p style="font-size:1.05rem;line-height:1.75;color:var(--navy-muted);">Type C FIBCs feature an interconnected network of conductive carbon grid threads woven throughout the bag body and lifting loops. All conductive components must be grounded via a grounding cable during every fill and discharge operation to safely drain electrostatic charge to earth.</p>
+                        <div class="type-safety-alert alert-safe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;margin-top:1px"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span><strong>Safe for:</strong> Explosive powder environments and flammable solvent atmospheres — <strong>only when properly grounded</strong> to a verified earthing point.</span>
+                        </div>
+                        <div class="spec-grid-box">
+                            <div class="spec-item-box"><strong>Resistance to Ground</strong><span>&lt; 10&sup8; Ohms</span></div>
+                            <div class="spec-item-box"><strong>Grounding Required</strong><span><strong style="color:#c53030">MANDATORY</strong> operator cable</span></div>
+                            <div class="spec-item-box"><strong>Dissipation Method</strong><span>Conductive thread grid to earth</span></div>
+                            <div class="spec-item-box"><strong>SWL Range</strong><span>500 kg – 2,000 kg</span></div>
+                            <div class="spec-item-box"><strong>Best Applications</strong><span>Explosive powders, pharma APIs, chemical solvents</span></div>
+                            <div class="spec-item-box"><strong>Standard</strong><span>IEC 61340-4-4</span></div>
+                        </div>
+                        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+                            <button class="btn btn-primary card-rfq-btn" data-product="Type C Groundable FIBC">Request Type C Quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel D -->
+            <div class="type-panel" id="panel-d">
+                <div class="type-content-grid">
+                    <div class="type-image-col">
+                        <img src="assets/antistatic_bag.png" alt="Type D Crohmiq Static Dissipative FIBC">
+                    </div>
+                    <div>
+                        <div class="badge" style="margin-bottom:1rem;">Official Crohmiq&reg; Licensee</div>
+                        <h2 style="font-size:2.2rem;margin-bottom:1rem;">Type D — Crohmiq&reg; Static Dissipative</h2>
+                        <p style="font-size:1.05rem;line-height:1.75;color:var(--navy-muted);">Flexituff is the exclusive Indian licensee of Texene USA, producing patented <strong>Crohmiq&reg;</strong> Type D static dissipative bulk bags. Engineered with quasi-conductive threads that safely dissipate static charges into the atmosphere via low-energy, harmless corona discharge — completely eliminating the risk of human error with grounding cables.</p>
+                        <div class="type-safety-alert alert-safe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;margin-top:1px"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span><strong>No Grounding Required:</strong> Type D Crohmiq&reg; bags are safe for Zone 1, Zone 2, Zone 21, and Zone 22 hazardous locations without any operator grounding connection.</span>
+                        </div>
+                        <div class="spec-grid-box">
+                            <div class="spec-item-box"><strong>Dissipation Method</strong><span>Low-energy Corona Discharge into air</span></div>
+                            <div class="spec-item-box"><strong>Grounding Required</strong><span><strong style="color:#16a34a">ZERO</strong> — Fail-safe design</span></div>
+                            <div class="spec-item-box"><strong>Licensing</strong><span>Official Texene Crohmiq&reg; USA Licensee</span></div>
+                            <div class="spec-item-box"><strong>SWL Range</strong><span>500 kg – 2,000 kg</span></div>
+                            <div class="spec-item-box"><strong>Zone Safety</strong><span>Zone 0, 1, 2, 21, 22 Hazardous Locations</span></div>
+                            <div class="spec-item-box"><strong>Standard</strong><span>IEC 61340-4-4 &amp; BS EN 13432</span></div>
+                        </div>
+                        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+                            <button class="btn btn-primary card-rfq-btn" data-product="Type D Crohmiq FIBC">Request Type D Quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Matrix -->
+            <div class="matrix-wrap">
+                <h3 style="margin-bottom:1.5rem;font-size:1.6rem;">Quick Comparison — Type A vs B vs C vs D</h3>
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Type A</th>
+                            <th>Type B</th>
+                            <th>Type C</th>
+                            <th>Type D (Crohmiq&reg;)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Static Protection</td>
+                            <td>None</td>
+                            <td>Breakdown &lt; 6kV</td>
+                            <td>Conductive Grid</td>
+                            <td>Corona Discharge</td>
+                        </tr>
+                        <tr>
+                            <td>Grounding Required?</td>
+                            <td class="check-no">No</td>
+                            <td class="check-no">No</td>
+                            <td class="check-yes">YES — Mandatory</td>
+                            <td class="check-yes" style="color:#16a34a;">NO — Self-safe</td>
+                        </tr>
+                        <tr>
+                            <td>Combustible Dust Safe?</td>
+                            <td class="check-no">Non-flammable only</td>
+                            <td>MIE &gt; 3 mJ dusts only</td>
+                            <td class="check-yes">All dusts (grounded)</td>
+                            <td class="check-yes">All dusts</td>
+                        </tr>
+                        <tr>
+                            <td>Flammable Gas / Zone 1–2?</td>
+                            <td class="check-no">Unsafe</td>
+                            <td class="check-no">Unsafe</td>
+                            <td class="check-yes">Safe (when grounded)</td>
+                            <td class="check-yes">Safe (no grounding)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-cta-block">
+            <h2>Need Help Choosing the Right FIBC Type?</h2>
+            <p>Our electrostatic safety engineering team can evaluate your material's Minimum Ignition Energy (MIE), zone classification, and application requirements to specify the exact solution.</p>
+            <button class="btn btn-primary btn-lg card-rfq-btn" data-product="Types A B C Anti-Static">Request Anti-Static Technical Audit</button>
+        </div>
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <div class="brand-logo footer-logo"><img src="assets/Flexituff_logo.png" alt="Flexituff Logo" class="site-logo-img footer-logo-img"></div>
+                <p class="footer-text">Flexituff Technology International Limited<br>C 41-50, SEZ, Sector 3 Pithampur 454775<br>Distt. Dhar, Madhya Pradesh, India</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About &amp; History</a></li>
+                    <li><a href="leadership.html">Leadership &amp; Vision</a></li>
+                    <li><a href="products.html">Products Catalog</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="global.html">Global Reach</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Sales</h4>
+                <p>FIBC: <a href="mailto:fibc@flexituff.com">fibc@flexituff.com</a></p>
+                <p>Phone: <a href="tel:+917292401681">+91 7292 401681 / 82 / 83</a></p>
+                <p>Website: <a href="https://flexituff.com/fibc/">flexituff.com/fibc</a></p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Flexituff Technology International Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <div class="rfq-modal-overlay" id="rfqModal">
+        <div class="rfq-modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h3>Request FIBC Quotation</h3>
+                <p>Specify your FIBC requirements and our engineering team will respond within 24 hours.</p>
+            </div>
+            <form id="rfqForm" onsubmit="event.preventDefault(); handleRFQSubmit();">
+                <div class="form-group">
+                    <label for="bagType">FIBC Product Type</label>
+                    <select id="bagType" class="form-control" required>
+                        <option value="">Select Product Type</option>
+                        <option value="Types A B C Anti-Static">Types A, B &amp; C Anti-Static FIBCs</option>
+                        <option value="UN Certified Bags">UN Certified Bags</option>
+                        <option value="Food Grade FIBC">Food Grade &amp; Pharma FIBC</option>
+                        <option value="rPP Eco FIBC Bags">rPP Eco FIBC Bags</option>
+                        <option value="U-Panel Bags">U-Panel Bags</option>
+                        <option value="Four Loop Bags">Four Loop / Four Panel Bags</option>
+                        <option value="Circular Juki Bags">Circular / Juki Bags</option>
+                        <option value="Conical Bottom Bags">Conical Bottom Bags</option>
+                        <option value="Builder / Tunnel Lift Bags">Builder / Tunnel Lift Bags</option>
+                        <option value="Baffle Bags (Q Bags)">Baffle Bags (Q-Bags)</option>
+                        <option value="Ventilated Bags">Ventilated Bags</option>
+                        <option value="Single / Two Loop Bags">Single / Two Loop Bags</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName">Your Full Name</label>
+                        <input type="text" id="contactName" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Work Email</label>
+                        <input type="email" id="contactEmail" class="form-control" placeholder="john@company.com" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Quotation Request</button>
+            </form>
+            <div id="rfqSuccessMsg" class="success-message" style="display: none;">Thank you! Our FIBC sales team will reach out shortly.</div>
+        </div>
+    </div>
+    
+    <script>
+        // Type tab switcher
+        document.querySelectorAll('.type-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.type-tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.type-panel').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.target).classList.add('active');
+            });
+        });
+        // Anchor deep links
+        const hash = window.location.hash;
+        if (hash) {
+            const map = {'#type-a':'panel-a','#type-b':'panel-b','#type-c':'panel-c','#type-d':'panel-d'};
+            if (map[hash]) {
+                document.querySelectorAll('.type-tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.type-panel').forEach(p => p.classList.remove('active'));
+                document.querySelector(`[data-target="${map[hash]}"]`).classList.add('active');
+                document.getElementById(map[hash]).classList.add('active');
+            }
+        }
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>
